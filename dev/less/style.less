@@ -1,0 +1,73 @@
+body {
+	background-color: #fff;
+	color:#000;
+}
+
+.page-wrapper {
+	 transition: .2s;
+}
+
+.blur {
+	filter: blur(20px);
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top:0;
+		left: 0;
+		width: 100%;
+		height:100%;
+		background-color: rgba(237,73,51,.5);
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+@mainColor: #fff;
+@secondaryColor: #ED4933;
+@worksColor: #2B343D;
+
+.mainFont(@font-size:14px, @line-height: @font-size + 6px) {
+	font-family: 'Open Sans', sans-serif;
+	color:@mainColor;
+	font-size: @font-size;
+	line-height: @line-height;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.clearfix() {
+	
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.wrapper() {
+	min-width: 320px;
+	padding: 0 40px;
+
+	@media (min-width:600px) {
+		padding: 0 100px;
+	}
+
+	@media (min-width:900px) {
+		padding: 0 160px;
+	}
+}
+
+
+
+@import 'components/page-header';
+@import 'components/features';
+@import 'components/works';
+@import 'components/info';
+@import 'components/footer';
+@import 'components/subscribe';
+@import 'components/social';
+@import 'components/navigation';
