@@ -33,8 +33,19 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  padding-top: 150px;
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .page-header-inner {
   min-width: 320px;
@@ -112,16 +123,17 @@ body {
   background-color: #ED4933;
   letter-spacing: 6px;
 }
-@media (min-width: 600px) {
-  .page-header {
-    padding-top: 200px;
-  }
+/* @media (min-width: 600px) {
+	.page-header {
+		padding-top: 200px;
+	}
 }
+
 @media (min-width: 900px) {
-  .page-header {
-    padding-top: 250px;
-  }
-}
+	.page-header {
+		padding-top: 250px;
+	}
+} */
 .features {
   background-color: #21B2A6;
   padding-top: 40px;
